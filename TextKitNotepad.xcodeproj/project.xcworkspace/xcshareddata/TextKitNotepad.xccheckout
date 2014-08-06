@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DB00C073-B320-4831-B0B3-E26BAFF46CAF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TextKitNotepad</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FF7730F5-378B-4AED-96C8-D679718BB70C</key>
+		<string>https://github.com/perrychen901105/DynamicType</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TextKitNotepad.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FF7730F5-378B-4AED-96C8-D679718BB70C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/perrychen901105/DynamicType</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FF7730F5-378B-4AED-96C8-D679718BB70C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FF7730F5-378B-4AED-96C8-D679718BB70C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DynamicType</string>
+		</dict>
+	</array>
+</dict>
+</plist>
