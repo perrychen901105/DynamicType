@@ -32,6 +32,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(preferredContentSizeChanged:)
+                                                 name:UIContentSizeCategoryDidChangeNotification
+                                               object:nil];
+}
+
+- (void)preferredContentSizeChanged:(NSNotification *) notification {
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -52,8 +61,31 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     Note* note = [self notes][indexPath.row];
-    cell.textLabel.text = note.title;
+    
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    UIColor *textColor = [UIColor colorWithRed:0.175f green:0.458f blue:0.813f alpha:1.0f];
+    NSDictionary *attrs = @{ NSForegroundColorAttributeName:textColor,
+                             NSFontAttributeName:font,
+                             NSTextEffectAttributeName:NSTextEffectLetterpressStyle};
+    NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:note.title
+                                                                     attributes:attrs];
+    cell.textLabel.attributedText = attrString;
+//    cell.textLabel.text = note.title;
+//    cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static UILabel *label;
+    if (!label) {
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, FLT_MAX, FLT_MAX)];
+        label.text = @"test";
+    }
+    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    [label sizeToFit];
+    
+    return ceilf(label.frame.size.height * 1.7);
 }
 
 #pragma mark - Navigation

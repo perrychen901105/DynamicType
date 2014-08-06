@@ -25,6 +25,7 @@
 		72DDD5311771B395009BA334 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DDD5301771B395009BA334 /* Note.m */; };
 		72DDD5341771B6B7009BA334 /* NoteEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DDD5331771B6B7009BA334 /* NoteEditorViewController.m */; };
 		72ECAE8C1773A2A5001F1251 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ECAE8B1773A2A5001F1251 /* CoreText.framework */; };
+		C266F37E199231300054C18E /* SyntaxHighlightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = C266F37D199231300054C18E /* SyntaxHighlightTextStorage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		72DDD5321771B6B7009BA334 /* NoteEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteEditorViewController.h; sourceTree = "<group>"; };
 		72DDD5331771B6B7009BA334 /* NoteEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteEditorViewController.m; sourceTree = "<group>"; };
 		72ECAE8B1773A2A5001F1251 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		C266F37C199231300054C18E /* SyntaxHighlightTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyntaxHighlightTextStorage.h; sourceTree = "<group>"; };
+		C266F37D199231300054C18E /* SyntaxHighlightTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyntaxHighlightTextStorage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 		72DDD4FD17719E03009BA334 /* TextKitNotepad */ = {
 			isa = PBXGroup;
 			children = (
+				C266F37C199231300054C18E /* SyntaxHighlightTextStorage.h */,
+				C266F37D199231300054C18E /* SyntaxHighlightTextStorage.m */,
 				722C457F177C500B00F1DDA2 /* TimeIndicatorView.h */,
 				722C4580177C500B00F1DDA2 /* TimeIndicatorView.m */,
 				72DDD50617719E03009BA334 /* AppDelegate.h */,
@@ -272,6 +277,7 @@
 				72DDD5311771B395009BA334 /* Note.m in Sources */,
 				72DDD50817719E03009BA334 /* AppDelegate.m in Sources */,
 				72DDD5341771B6B7009BA334 /* NoteEditorViewController.m in Sources */,
+				C266F37E199231300054C18E /* SyntaxHighlightTextStorage.m in Sources */,
 				722C4581177C501100F1DDA2 /* TimeIndicatorView.m in Sources */,
 				72DDD52E1771A156009BA334 /* NotesListViewController.m in Sources */,
 				72DDD50417719E03009BA334 /* main.m in Sources */,

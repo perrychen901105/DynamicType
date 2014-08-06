@@ -7,6 +7,7 @@
 //
 
 #import "NoteEditorViewController.h"
+#import "TimeIndicatorView.h"
 #import "Note.h"
 
 @interface NoteEditorViewController () <UITextViewDelegate>
@@ -17,6 +18,7 @@
 
 @implementation NoteEditorViewController
 {
+    TimeIndicatorView *_timeView;
 }
 
 - (void)viewDidLoad
@@ -25,6 +27,34 @@
     
     self.textView.text = self.note.contents;
     self.textView.delegate = self;
+    
+    self.textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(preferredContentSizeChanged:)
+                                                 name:UIContentSizeCategoryDidChangeNotification
+                                               object:nil];
+    
+    _timeView = [[TimeIndicatorView alloc] init:_note.timestamp];
+    [self.view addSubview:_timeView];
+}
+
+- (void)preferredContentSizeChanged:(NSNotification *)notification
+{
+    self.textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    [self updateTimeIndicatorFrame];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [self updateTimeIndicatorFrame];
+}
+
+- (void)updateTimeIndicatorFrame {
+    [_timeView updateSize];
+    _timeView.frame = CGRectOffset(_timeView.frame, self.view.frame.size.width - _timeView.frame.size.width, 0.0);
+    UIBezierPath *exclusionPath = [_timeView curvePathWithOrigin:_timeView.center];
+    _textView.textContainer.exclusionPaths = @[exclusionPath];
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView
