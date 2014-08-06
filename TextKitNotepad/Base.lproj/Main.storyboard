@@ -81,9 +81,6 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Note" id="tPz-Q9-CP3"/>
-                    <connections>
-                        <outlet property="textView" destination="NNE-Df-LSV" id="eel-tW-vKp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o39-qb-IqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
