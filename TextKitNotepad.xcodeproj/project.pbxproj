@@ -408,7 +408,7 @@
 				GCC_PREFIX_HEADER = "TextKitNotepad/TextKitNotepad-Prefix.pch";
 				INFOPLIST_FILE = "TextKitNotepad/TextKitNotepad-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4131B4A6-C945-49F3-9DA6-384E7010F1C5";
+				PROVISIONING_PROFILE = "8203231D-8117-4D58-B847-EF1BD87023BF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -423,7 +423,7 @@
 				GCC_PREFIX_HEADER = "TextKitNotepad/TextKitNotepad-Prefix.pch";
 				INFOPLIST_FILE = "TextKitNotepad/TextKitNotepad-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4131B4A6-C945-49F3-9DA6-384E7010F1C5";
+				PROVISIONING_PROFILE = "8203231D-8117-4D58-B847-EF1BD87023BF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

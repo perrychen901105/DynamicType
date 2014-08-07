@@ -58,6 +58,10 @@
      */
     _textView = [[UITextView alloc] initWithFrame:newTextViewRect textContainer:container];
     _textView.delegate = self;
+    
+    // ensure that the text view is not editable initially
+    _textView.editable = NO;
+    _textView.dataDetectorTypes = UIDataDetectorTypeLink;
     [self.view addSubview:_textView];
 }
 
@@ -116,4 +120,15 @@
 
 
 
+- (IBAction)editAction:(id)sender {
+    if (_textView.editable) {
+        self.editButton.title = @"Edit";
+        _textView.editable = NO;
+        [_textView resignFirstResponder];
+    } else {
+        self.editButton.title = @"Done";
+        _textView.editable = YES;
+        [_textView becomeFirstResponder];
+    }
+}
 @end

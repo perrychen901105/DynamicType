@@ -12,6 +12,8 @@
 
 @interface NoteEditorViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 @property Note* note;
+- (IBAction)editAction:(id)sender;
 
 @end
