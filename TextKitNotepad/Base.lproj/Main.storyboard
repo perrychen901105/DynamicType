@@ -80,7 +80,9 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Note" id="tPz-Q9-CP3"/>
+                    <navigationItem key="navigationItem" title="Note" id="tPz-Q9-CP3">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="C2N-k4-uql"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o39-qb-IqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

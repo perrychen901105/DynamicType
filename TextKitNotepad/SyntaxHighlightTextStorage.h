@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SyntaxHighlightTextStorage : NSTextStorage
-
+- (void)update;
 @end
